@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт районної клініки</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -10,7 +11,9 @@
     <header class="clinic-head">
         <ul class="menu">
             <li class="menu-item">
-                <a href="index.html" class="logo"><img src="icons/clinic_logo.png" alt=""></a>
+                <a href="index.html" class="logo disabled">
+                    <img src="img/clinic_logo.png" alt="">
+                </a>
             </li>
             <li class="menu-item dropdown">
                 <a class="btn dropbtn">Лікарня</a>
@@ -19,25 +22,81 @@
                         <a class="inner-btn" href="">Про лікарню</a>
                     </li>
                     <li>
-                        <a class="inner-btn" href="contacts.html">Контакти</a>
+                        <a class="inner-btn" href="pages/contacts.html">Контакти</a>
                     </li>
                     <li>
-                        <a class="inner-btn" href="vacancy.html">Вакансії</a>
+                        <a class="inner-btn" href="pages/vacancy.html">Вакансії</a>
                     </li>
                 </ul>
             </li>
             <li class="menu-item">
-                <a class="btn" href="staff.html">Наші лікарі</a>
+                <a class="btn" href="pages/staff.html">Наші лікарі</a>
             </li>
             <li class="menu-item">
-                <a class="btn" href="#registration">Реєстрація</a>
+                <a class="btn" href="#">Реєстрація</a>
             </li>
             <li class="menu-item">
-                <a class="btn" href="schedule-work.html">Графік роботи</a>
+                <a class="btn" href="pages/schedule-work.html">Графік роботи</a>
             </li>
         </ul>
+        <div class="mobile-menu">
+            <div class="mobile-menu-btn-wrapper">
+                <button>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-content">
+                <li class="dropdown-mobile"></li>
+                <li class="menu-item">
+                    <a class="btn disabled" href="index.html" >Додому</a>
+                </li>
+                <li class="menu-item dropdown-content">
+                    <a class="btn dropbtn">Лікарня</a>
+                    <ul>
+                        <li>
+                            <a class="btn" href="#">Про лікарню</a>
+                        </li>
+                        <li>
+                            <a class="btn" href="pages/contacts.html">Контакти</a>
+                        </li>
+                        <li>
+                            <a class="btn" href="pages/vacancy.html">Вакансії</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a class="btn" href="pages/staff.html">Наші лікарі</a>
+                </li>
+                <li class="menu-item">
+                    <a class="btn" href="#">Реєстрація</a>
+                </li>
+                <li class="menu-item">
+                    <a class="btn" href="pages/schedule-work.html">Графік роботи</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
+        <div class="brief-info-wrapper">
+            <div class="title-box">
+                <h2>Загальна інформація</h2>
+            </div>
+            <div class="brief-info">
+                <div class="about-services">
+                    <h2>Ми надаємо <span style="color: gold; font: inherit">високоякісні</span> консультації</h2>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, est exercitationem fugit magnam quisquam veritatis?</span>
+                    <div class="buttons">
+                        <a href="" id="record-btn">Запис до лікаря</a>
+                        <a href="" id="more-info-btn">Дізнатися більше</a>
+                    </div>
+                </div>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/200w/photo_about.png">
+                    <source media="(max-width: 1300px)" srcset="img/300w/photo_about.png">
+                    <img src="img/400w/photo_about.png" alt="">
+                </picture>
+            </div>
+        </div>
         <div class="about-clinic-wrapper">
             <div class="title-box">
                 <h2>Про клініку</h2>
@@ -60,24 +119,6 @@
                     нормативним та методичним документам Міністерства охорони здоров’я України, рішенням
                     Харківської міської ради та її виконавчого комітету, наказам Департаменту охорони здоров’я
                     Харківської міської ради, Статута та іншим нормативним актам.
-                </div>
-            </div>
-        </div>
-        <div class="brief-info-wrapper">
-            <div class="title-box">
-                <h2>Загальна інформація</h2>
-            </div>
-            <div class="brief-info">
-                <div class="about-services">
-                    <h2>Ми надаємо <span style="color: gold; font: inherit">високоякісні</span> консультації</h2>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, est exercitationem fugit magnam quisquam veritatis?</span>
-                    <div class="buttons">
-                        <a href="" id="record-to-doctor">Запис до лікаря</a>
-                        <a href="" id="more-info">Дізнатися більше</a>
-                    </div>
-                </div>
-                <div class="bg-image">
-                    <img src="icons/photo_about.png" alt="">
                 </div>
             </div>
         </div>
@@ -108,5 +149,6 @@
     </footer>
 </div>
 <script src="https://kit.fontawesome.com/c3664bd84b.js" crossorigin="anonymous"></script>
+<script src="js/header.js"></script>
 </body>
 </html>
