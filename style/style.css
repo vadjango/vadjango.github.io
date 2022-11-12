@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 
 * {
     margin: 0;
@@ -13,58 +14,6 @@ html {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.vacancy-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.vacancy {
-    display: flex;
-    width: 60%;
-    justify-content: space-between;
-}
-
-.vacancy img {
-    width: 600px;
-    height: 400px;
-}
-
-.vacancy-info {
-    font-size: 20px;
-}
-
-.location-contacts {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    width: 65%;
-}
-
-.contacts .subtitle {
-    margin: 0;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: rgba(80, 170, 170, 1);
-}
-
-.location-contacts .contacts {
-    display: grid;
-}
-
-.location-contacts .inner-contact {
-    line-height: 1.3em;
-}
-
-.location-contacts .inner-contact * {
-    font-size: 1.3rem;
-}
-
-.location-contacts .inner-contact .link {
-    text-decoration: none;
-    color: #4299E9;
-    font-weight: 500;
 }
 
 html, body {
@@ -89,6 +38,15 @@ html, body {
     width: 100vw;
     top: 0;
     left: 0;
+}
+
+.clinic-head .site-name {
+    background-color: rgba(100, 244, 255, 0.5);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .menu {
@@ -199,7 +157,7 @@ html, body {
 }
 
 main {
-    margin: 80px 0;
+    margin: 120px 0;
     flex: 1 1 auto;
 }
 
@@ -211,20 +169,23 @@ main {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    height: 450px;
     margin: 0 auto;
 }
 
 .brief-info picture {
+    display: block;
     height: auto;
 }
 
 .brief-info picture img {
+    display: block;
+    vertical-align: bottom;
     object-fit: contain;
 }
 
 .brief-info .about-services {
     display: grid;
+    align-items: center;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
@@ -269,19 +230,18 @@ main {
 .about-clinic {
     display: grid;
     justify-items: center;
-    border-radius: 10px;
     row-gap: 40px;
 }
 
 .about-clinic .description {
     line-height: 30px;
     width: 80%;
-    font-size: 20px;
+    font-size: 1.1rem;
     font-family: "Arial", sans-serif;
 }
 
 .quote-wrapper {
-    width: 70%;
+    width: 80%;
 }
 
 .quote-wrapper .quote {
@@ -329,6 +289,7 @@ main {
     font-size: 25px;
     margin-top: 0;
     background-color: #fff;
+    white-space: normal;
     padding: 0 5px;
     color: rgba(80, 170, 170, 1);
 }
@@ -351,172 +312,8 @@ main {
     position: absolute;
 }
 
-.block-doctor {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin: 20px 20px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 3px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgba(80, 170, 170, .5);
-}
-
-.block-doctor .full-description {
-    display: grid;
-}
-
-.block-doctor .photo {
-    display: flex;
-    justify-content: center;
-}
-
-.block-doctor > * {
-    padding: 0 10px;
-}
-
-.block-doctor img {
-    border-radius: 10px;
-    outline: none;
-}
-
-.doctors {
-    width: 100%;
-    box-sizing: content-box;
-    padding: 5px 0;
-    text-align: center;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-}
-
-
-.description-block:first-child {
-    font-weight: bold;
-}
-
-.full-description .description-block .experience-description {
-    font-weight: 800;
-}
-
-.full-description .description-header {
-    font-size: 1.4rem;
-}
-
-
-.description-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: rgba(80, 170, 170, 1);
-    border-radius: 15px;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.07);
-    margin: 15px 10px 80px 0;
-    padding: 10px;
-    position: relative;
-}
-
-.description-block .description {
-    line-height: 30px;
-}
-
-.description-block .doctor-btn {
-    text-decoration: none;
-    color: black;
-    background-color: #0CC5EE;
-    position: absolute;
-    padding: 10px 15px;
-    border-radius: 20px;
-    right: 0;
-    bottom: -60px;
-}
-
-.description-block .doctor-btn:hover {
-    background-color: #1975BB;
-}
-
-.description-block::before {
-    content: '\201C';
-    background-repeat: no-repeat;
-    display: block;
-    position: absolute;
-    top: -10px;
-    font-size: 25px;
-    font-weight: 800;
-    color: #fff;
-    background-color: rgba(6, 151, 214, 1);
-    height: 23px;
-    width: 45px;
-}
-
-.description-block * {
-    font-size: 1.2rem;
-    font-family: "Inter", sans-serif;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.table-wrapper {
-    display: grid;
-    justify-items: center;
-    row-gap: 40px;
-    min-width: 768px;
-}
-
-.table-block {
-    display: grid;
-    row-gap: 40px;
-    margin: 0 auto;
-    position: relative;
-    overflow: auto;
-    min-width: 768px;
-}
-
-.table-wrapper .working-table {
-    font-family: "Arial", sans-serif;
-    font-weight: lighter;
-    border-collapse: collapse;
-    min-width: 768px;
-    width: 100%;
-}
-
-.working-table .table-title {
-    font-size: 1.6rem;
-    padding-bottom: 20px;
-}
-
-.working-table thead,
-.working-table tbody {
-    background-color: rgb(255, 255, 255, .7);
-}
-
-.working-table thead th {
-    padding: 10px 0;
-}
-
-.table-wrapper .working-table,
-.table-wrapper .working-table tr {
-    border: solid 1px rgb(100, 100, 100, 0.5);
-}
-
-.working-table .schedule-name {
-    padding: 20px;
-}
-
-.working-table .schedule-info {
-    border-left: solid 2px rgba(108, 192, 192, 1);
-    padding: 4px;
-}
-
-.working-table td {
-    width: 190px;
-    height: 80px;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
 .form-wrapper {
     display: flex;
-    height: 50em;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -532,13 +329,13 @@ main {
     border-radius: 10px;
 }
 
-.form-container .title-box {
+.form-container .title-block {
     font-size: 25px;
     font-weight: 500;
     position: relative;
 }
 
-.form-container .title-box:before {
+.form-container .title-block:before {
     content: "";
     position: absolute;
     left: 0;
@@ -552,17 +349,14 @@ main {
 .form-container form .user-details {
     display: grid;
     width: 100%;
-    grid-template-areas: "opt opt"
-                          "name ln"
+    grid-template-areas:  "name ln"
+                          "family family"
                           "num num"
+                          "reg reg"
                           "complaint-desc complaint-desc";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 30px;
-}
-
-form .user-details > #option-box {
-    grid-area: opt;
 }
 
 form .user-details > #patient-firstname {
@@ -573,6 +367,10 @@ form .user-details > #patient-lastname {
     grid-area: ln;
 }
 
+form .user-details > #family-doctor-block {
+    grid-area: family;
+}
+
 form .user-details > #phone-number {
     grid-area: num;
 }
@@ -580,6 +378,10 @@ form .user-details > #phone-number {
 form .user-details > #health-complaint {
     grid-area: complaint-desc;
     display: block;
+}
+
+form .user-details > #record-date-block {
+    grid-area: reg;
 }
 
 select {
@@ -597,6 +399,10 @@ select {
     color: #000;
     cursor: pointer;
     font-size: 1em;
+}
+
+br.show-for-mobile {
+    content: '';
 }
 
 .select {
@@ -650,6 +456,20 @@ form .user-details .inner-box {
     height: 300px !important;
     font-size: 15px;
     resize: none;
+}
+
+.user-details .inner-box span[id=family-doctor] {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.user-details .inner-box input[type=date] {
+    font-size: 1.2rem;
+    width: 100%;
 }
 
 .user-details .inner-box .textholder {
@@ -714,6 +534,7 @@ form .button input:hover {
     border: solid 2px #000000;
     padding: 10px 0;
     border-radius: 10px;
+    font-size: 1rem;
 }
 
 .doctor-info img {
@@ -852,6 +673,33 @@ footer .socials {
     font-size: 20px;
 }
 
+.what-makes-us-special-grid {
+    display: grid;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.what-makes-us-special-article {
+    background-color: rgba(230, 230, 230, 0.5);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.what-makes-us-special-article > * {
+    margin: 15px 0;
+}
+
+.what-makes-us-special-article img {
+    height: 75px;
+    margin: 0;
+}
+
 @media screen and (max-width: 1300px) {
     .brief-info .about-services h2 {
         font-size: 2rem;
@@ -869,27 +717,11 @@ footer .socials {
         font-size: 1.2rem;
     }
 
-    .description-block * {
-        font-size: 1rem;
-    }
-
-    .description {
-        line-height: 20px;
-    }
 }
 
 @media screen and (max-width: 1250px) {
-    .full-description .description-header {
-        font-size: 1rem;
-    }
-
-    .block-doctor {
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-    }
-
     .brief-info .about-services h2 {
-        font-size: calc(1.5rem + 1rem * (100vw / 1250));
+        font-size: calc(1.5rem + 1 * (100vw / 1250));
     }
 }
 
@@ -901,20 +733,13 @@ footer .socials {
     .menu-item a img {
         height: 60px;
     }
-
-    .working-table td {
-        font-size: 0.9rem;
-        width: 160px;
-        height: 60px;
-    }
-
-    .working-table .table-title {
-        font-size: 1.4rem;
-        padding-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 932px) {
+    .about-services .buttons * {
+        font-size: 0.9rem;
+    }
+
     .menu-item {
         padding: 0 10px;
     }
@@ -926,46 +751,27 @@ footer .socials {
     .menu-item .btn {
         font-size: 1.2rem;
     }
-
-    .working-table td {
-        font-size: 0.8rem;
-        width: 130px;
-        height: 50px;
-    }
-
-    .working-table .table-title {
-        font-size: 1rem;
-        padding-bottom: 10px;
-    }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .clinic-head .site-name {
+        font-size: calc(1rem + 0.3 * (100vw / 768));
+    }
+
     main {
-        margin: 40px 0;
+        margin: 15vh 0;
     }
 
-    .doctors {
-        grid-template-columns: 1fr;
-        grid-row-gap: 15px;
-        justify-content: center;
-        margin: 0 auto;
+    .what-makes-us-special-grid {
+        width: 95%;
     }
 
-    .description-block .doctor-btn {
-        position: relative;
+    .title-box {
+        margin: 20px 0;
     }
 
-    .full-description .description-header {
-        font-size: 1.2rem;
-    }
-
-    .block-doctor {
-        width: calc(192px + 192 * (100vw / 768));
-        margin: 0 auto;
-    }
-
-    .description-block * {
-        font-size: 0.8rem;
+    .about-clinic * {
+        font-size: 0.9rem;
     }
 
     .footer-content {
@@ -987,37 +793,43 @@ footer .socials {
         text-align: center;
         margin: 10px 0;
     }
+}
 
-    .working-table {
-        max-width: 100%;
-        overflow-x: visible;
-        -webkit-overflow-scrolling: touch;
+
+@media screen and (max-width: 640px) {
+    .brief-info {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .brief-info .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 15px;
+    }
+
+    .brief-info .buttons * {
+        text-align: center;
+        margin: 0 10px;
     }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 425px) {
 
-    .form-container {
-        max-width: 100%;
+    br.show-for-mobile {
+        content: none;
     }
 
-    form .user-details .inner-box {
-        margin-bottom: 15px;
-        width: 100%;
+    .what-makes-us-special-grid {
+        grid-template-columns: none;
     }
 
-    .form-container form .user-details {
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-
-    .user-details::-webkit-scrollbar {
-        width: 0;
+    .title-box h2 {
+        font-size: 1.2rem;
     }
 }
 
 @media screen and (max-width: 384px) {
-
     .footer-content h3 {
         font-size: 1rem;
     }
@@ -1028,9 +840,5 @@ footer .socials {
 
     .title-box:before {
         height: 1px;
-    }
-
-    .title-box h2 {
-        font-size: 1.2rem;
     }
 }

@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вакансії</title>
+    <title>Реєстрація на прийом</title>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/vacancy.css">
 </head>
 <body>
 <div class="wrapper">
     <header class="clinic-head">
-        <div class="site-name">Харківська районна клініка №496</div>
         <ul class="menu">
             <li class="menu-item">
                 <a href="../index.html" class="logo">
@@ -27,7 +25,7 @@
                         <a class="inner-btn" href="contacts.html">Контакти</a>
                     </li>
                     <li>
-                        <a class="inner-btn disabled" href="vacancy.html">Вакансії</a>
+                        <a class="inner-btn" href="vacancy.html">Вакансії</a>
                     </li>
                 </ul>
             </li>
@@ -35,7 +33,7 @@
                 <a class="btn" href="staff.html">Наші лікарі</a>
             </li>
             <li class="menu-item">
-                <a class="btn" href="registration.html">Реєстрація</a>
+                <a class="btn disabled" href="registration.html">Реєстрація</a>
             </li>
             <li class="menu-item">
                 <a class="btn" href="schedule-work.html">Графік роботи</a>
@@ -62,7 +60,7 @@
                             <a class="btn" href="contacts.html">Контакти</a>
                         </li>
                         <li>
-                            <a class="btn disabled" href="vacancy.html">Вакансії</a>
+                            <a class="btn" href="vacancy.html">Вакансії</a>
                         </li>
                     </ul>
                 </li>
@@ -70,7 +68,7 @@
                     <a class="btn" href="staff.html">Наші лікарі</a>
                 </li>
                 <li class="menu-item">
-                    <a class="btn" href="#">Реєстрація</a>
+                    <a class="btn disabled" href="#">Реєстрація</a>
                 </li>
                 <li class="menu-item">
                     <a class="btn" href="schedule-work.html">Графік роботи</a>
@@ -79,40 +77,45 @@
         </div>
     </header>
     <main>
-        <div class="title-box">
-            <h2>Вакансії</h2>
-        </div>
-        <div class="vacancy-wrapper">
-            <section class="vacancy">
-                <img src="../img/vacancy_photo.jpg" alt="">
-                <div class="vacancy-info">
-                    <span>Харківській регіональній клініці №496 потребуються:</span><br>
-                    <ul>
-                        <li>Сімейний лікар</li>
-                        <li>Вбиральник</li>
-                        <li>Менеджер</li>
-                    </ul>
-                    <br>
-                    <span>Повна зайнятість.</span><br>
-                    <span>Резюме висилати за адресою: <a
-                            href="mailto: kh_clinic_496@gmail.com">kh_clinic_496@gmail.com</a></span><br><br>
-                    <span>Запис за тел.:</span>
-                    <ul>
-                        <li>
-                            <a href="tel:0573119098">057 311 90 98</a>
-                        </li>
-                        <li>
-                            <a href="tel:0937198888">093 719 88 88</a>
-                        </li>
-                        <li>
-                            <a href="tel:0977198888">097 719 88 88</a>
-                        </li>
-                        <li>
-                            <a href="tel:0997198888">099 719 88 88</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <div class="form-wrapper">
+            <div class="form-container">
+                <div class="title-block">Реєстрація</div>
+                <form action="#">
+                    <div class="user-details">
+                        <div class="inner-box" id="patient-firstname">
+                            <label for="firstname" class="details">Ім'я <span style="color: red">*</span></label>
+                            <input class="textholder" id="firstname" type="text" placeholder="Введіть ім'я"
+                                   required>
+                        </div>
+                        <div class="inner-box" id="patient-lastname">
+                            <label for="lastname" class="details">Прізвище <span style="color: red">*</span></label>
+                            <input class="textholder" id="lastname" type="text" placeholder="Введіть прізвище"
+                                   required>
+                        </div>
+                        <div class="inner-box" id="family-doctor-block">
+                            <label for="family-doctor" class="details">Сімейний лікар</label><br>
+                            <span id="family-doctor">не визначено</span>
+                        </div>
+                        <div class="inner-box" id="record-date-block">
+                            <label for="record-date" class="details">Сімейний лікар</label><br>
+                            <input id="record-date" type="date">
+                        </div>
+                        <div class="inner-box" id="phone-number">
+                            <label for="number" class="details">Номер телефону <span style="color: red">*</span></label>
+                            <input class="textholder" id="number" type="text" placeholder="Введіть номер телефону"
+                                   required>
+                        </div>
+                        <div class="inner-box" id="health-complaint">
+                            <label for="complaint" class="details">Скарги на здоров'я <span style="color: red">*</span></label>
+                            <textarea class="textholder" id="complaint"
+                                      placeholder="Опишіть недоліки Вашого здоров'я..."></textarea>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Записатися">
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
@@ -140,7 +143,7 @@
         </div>
     </footer>
 </div>
-<script src="https://kit.fontawesome.com/c3664bd84b.js" crossorigin="anonymous"></script>
 <script src="../js/header.js"></script>
+<script src="../js/form.js"></script>
 </body>
 </html>
