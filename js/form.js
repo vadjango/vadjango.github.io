@@ -1,43 +1,69 @@
-const patient_doctor = {
-    "Мартов Вадим": "Тезер Аліна Олександрівна",
+const family_doctors_info = {
+    "рибалка 21": {
+        "лікар": "Тезер Аліна Олександрівна",
+        "вільні-дати-і-часи": {
+            "15.11": ["10:25", "12:25", "17:00"],
+            "16.11": ["9:30", "14:45"]
+        }
+    },
     "Раптовий Лев": "Лозовий Павло Викторович"
-}
+};
+
+const patientFirstName = document.querySelector("#patient-firstname input");
+const patientLastName = document.querySelector("#patient-lastname input");
+const address_field = document.getElementById("address");
+const family_doctor_label = document.getElementById("family-doctor");
+const dateBlock = document.getElementById("date");
+const timeBlock = document.getElementById("time");
 
 
-const name_field = document.getElementById("firstname");
-const lastname_field = document.getElementById("lastname");
-const family_doctor = document.getElementById("family-doctor");
-const input_date = document.getElementById("record-date");
-console.log(Date.now());
-input_date.value = Date.now();
-
-function getDate(date) {
-    return `${date.g}`
-}
-
-var name = "";
-var lastname = "";
-
-
-name_field.addEventListener("change", (e) => {
-    name = name_field.value;
-    changeText();
-})
-
-lastname_field.addEventListener("change", (e) => {
-    lastname = lastname_field.value;
-    changeText();
-})
-
-function changeText() {
-    if (name.length > 0 && lastname.length > 0 && typeof patient_doctor[lastname + " " + name] === "string") {
-        family_doctor.innerText = patient_doctor[lastname + " " + name];
-        family_doctor.style.color = "#000";
-        family_doctor.style.fontStyle = "inherit";
+address_field.addEventListener("change", function (e) {
+    clearDateTime();
+    if (family_doctors_info[address_field.value.toLowerCase()]) {
+        family_doctor_label.innerText = family_doctors_info[address_field.value.toLowerCase()]["лікар"];
+        family_doctor_label.style.fontStyle = "normal";
+        family_doctor_label.style.color = "black";
+        showDateTime(family_doctors_info);
+    } else {
+        family_doctor_label.innerText = "не визначено";
+        family_doctor_label.style.fontStyle = "italic";
+        family_doctor_label.style.color = "#999";
     }
-    else {
-        family_doctor.innerText = "не визначено";
-        family_doctor.style.color = "";
-        family_doctor.style.fontStyle = "";
+})
+
+function showDateTime(obj) {
+    const workDatetimeObj = obj[address_field.value.toLowerCase()]["вільні-дати-і-часи"];
+    for (var date in workDatetimeObj) {
+        // для кожної дати з об'єкта створюємо відповідну кнопку та додаємо у блок дат
+        const dateBtn = document.createElement("button");
+        dateBtn.value = date;
+        dateBtn.innerText = date;
+        dateBlock.appendChild(dateBtn);
+        dateBtn.addEventListener("click", showTime);
+    }
+
+    function showTime(e) {
+        // видаляємо усі минулі часи
+        while (timeBlock.firstChild) {
+            timeBlock.removeChild(timeBlock.firstChild);
+        }
+        e.target.style.backgroundColor = "rgb(67, 192, 192)";
+        // створюємо кнопки із часом та додаємо у блок часів
+        for (var time of workDatetimeObj[e.target.value]) {
+            const timeBtn = document.createElement("button");
+            timeBtn.value = time;
+            timeBtn.innerText = time;
+            timeBlock.appendChild(timeBtn);
+            timeBtn.addEventListener("click", function (e) {
+                e.target.style.backgroundColor = "rgb(67, 192, 192)";
+
+            })
+        }
+    }
+}
+
+function clearDateTime() {
+    while (dateBlock.firstChild) {
+        dateBlock.removeChild(dateBlock.firstChild);
     }
 }
