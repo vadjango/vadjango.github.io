@@ -1,4 +1,4 @@
-const URL = "https://vadjango.github.io/info.json";
+const URL = "http://localhost:63342/Regional clinic website/info.json";
 
 Object.compare = function (obj1, obj2) {
     for (var el in obj1) {
